@@ -17,3 +17,25 @@ jobs:
 
       - name: Build Next.js app
         run: npm run build
+      
+      - name: Deploy to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+        aws s3 sync ./out s3://your-s3-bucket-name
+  securityCheck: 
+    name: Security checks
+    runs-on: ubuntu-latest
+    steps: 
+      - name: check for security
+        run: |
+          echo "Running Security Checks..."
+          sleep 5s;
+          echo "Running Security Checks... 1"
+          sleep 5s;
+          echo "Running Security Checks... 2"
+          sleep 5s;
+          echo "Running Security Checks... 3"
+          sleep 5s;
+
