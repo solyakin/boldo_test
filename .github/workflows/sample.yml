@@ -11,10 +11,6 @@ jobs:
     steps: 
       - name: Clone Repository
         uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: |
-          echo "Running Installing Dependencies ..."
-          npm install
       - name: Run Linting
         run: |
           echo "Running Linting tests..."
