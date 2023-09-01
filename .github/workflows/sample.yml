@@ -34,3 +34,6 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
+      - name: Upload to s3
+        run: npm run upload
+
