@@ -1,8 +1,8 @@
-const fs = require('fs');
-const readDir = require('recursive-readdir');
-const path = require('path');
-const AWS = require('aws-sdk');
-const mime = require('mime-types');
+import fs from 'fs';
+import readDir from 'recursive-readdir';
+import path from 'path';
+import AWS from 'aws-sdk';
+import mime from 'mime-types';
 
 /*
 
